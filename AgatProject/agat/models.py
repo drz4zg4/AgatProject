@@ -20,7 +20,7 @@ class Panel(models.Model):
 		('PHILIPS', 'PHILIPS'),
 	)
 	producent_ekranu = models.CharField(max_length = 100, choices = PRODUCENT_EKRANU, default='wybierz')
-	osoba_testujaca = models.CharField(max_length=200, default='Jank Kowalski')
+	osoba_testujaca = models.CharField(max_length=200, default='Jan Kowalski')
 
 	pub_date = models.DateTimeField('Data testu')
 	numer_kartonu = models.IntegerField(default='0')
