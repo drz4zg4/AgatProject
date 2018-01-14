@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import FlatPanelDispla
+from .models import Panel
 
-admin.site.register(FlatPanelDispla)
+admin.site.register(Panel)
