@@ -10,7 +10,7 @@ class Panel(models.Model):
 		('19', '19"'),
 		('21', '21"'),
 	)
-	rozmiar_ekranu = models.CharField(max_length = 100, choices = ROZMIAR_EKRANU, default='wybierz')
+	rozmiar_ekranu = models.CharField(max_length = 100, choices = ROZMIAR_EKRANU, blank=True)
 
 	PRODUCENT_EKRANU = (
 		('wybierz', 'wybierz'),
@@ -19,9 +19,9 @@ class Panel(models.Model):
 		('ASUS', 'ASUS'),
 		('PHILIPS', 'PHILIPS'),
 	)
-	producent_ekranu = models.CharField(max_length = 100, choices = PRODUCENT_EKRANU, default='wybierz')
+	producent_ekranu = models.CharField(max_length = 100, choices = PRODUCENT_EKRANU, blank=True)
 	osoba_testujaca = models.CharField(max_length=200, default='Jan Kowalski')
 
-	pub_date = models.DateTimeField('Data testu')
-	numer_kartonu = models.IntegerField(default='0')
-	numer_palety = models.IntegerField(default='0')
+	data_testu = models.DateTimeField(default=datetime.now(), blank=True)
+	numer_kartonu = models.IntegerField(blank=True)
+	numer_palety = models.IntegerField(blank=True)
