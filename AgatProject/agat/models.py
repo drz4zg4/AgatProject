@@ -2,9 +2,9 @@ from datetime import datetime
 from django.db import models
 from django.utils import timezone
 
+
 class Panel(models.Model):
 	ROZMIAR_EKRANU = (
-		('wybierz', 'wybierz'),
 		('14', '14"'),
 		('17', '17"'),
 		('19', '19"'),
@@ -13,7 +13,6 @@ class Panel(models.Model):
 	rozmiar_ekranu = models.CharField(max_length = 100, choices = ROZMIAR_EKRANU, blank=True)
 
 	PRODUCENT_EKRANU = (
-		('wybierz', 'wybierz'),
 		('SAMSUNG', 'SAMSUNG'),
 		('LG', 'LG'),
 		('ASUS', 'ASUS'),

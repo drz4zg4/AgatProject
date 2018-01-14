@@ -1,3 +1,22 @@
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>AGAT - Flat Panel Display Recykling</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">AGAT - Flat Panel Display Recykling</a></h1>
+        </div>
+
+        {% for panel in panels %}
+            <div>
+                <p>published: {{ panel.data_testu }}</p>
+                <h1><a href="">{{ panel.data_testu }}</a></h1>
+                <p>{{ panel.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
